@@ -1,0 +1,142 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=2692, tid=3332
+#
+# JRE version:  (7.0_79-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000021bf000):  JavaThread "Unknown thread" [_thread_in_vm, id=3332, stack(0x0000000002470000,0x0000000002570000)]
+
+Stack: [0x0000000002470000,0x0000000002570000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000021bf000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3332, stack(0x0000000002470000,0x0000000002570000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 9728K, used 174K [0x00000000f5880000, 0x00000000f6300000, 0x0000000100000000)
+  eden space 8704K, 2% used [0x00000000f5880000,0x00000000f58ab8a8,0x00000000f6100000)
+  from space 1024K, 0% used [0x00000000f6200000,0x00000000f6200000,0x00000000f6300000)
+  to   space 1024K, 0% used [0x00000000f6100000,0x00000000f6100000,0x00000000f6200000)
+ ParOldGen       total 20992K, used 0K [0x00000000e0a00000, 0x00000000e1e80000, 0x00000000f5880000)
+  object space 20992K, 0% used [0x00000000e0a00000,0x00000000e0a00000,0x00000000e1e80000)
+ PSPermGen       total 21504K, used 697K [0x00000000db800000, 0x00000000dcd00000, 0x00000000e0a00000)
+  object space 21504K, 3% used [0x00000000db800000,0x00000000db8ae588,0x00000000dcd00000)
+
+Card table byte_map: [0x0000000005570000,0x00000000056a0000] byte_map_base: 0x0000000004e94000
+
+Polling page: 0x0000000000130000
+
+Code Cache  [0x0000000002570000, 0x00000000027e0000, 0x0000000005570000)
+ total_blobs=37 nmethods=0 adapters=20 free_code_cache=48890Kb largest_free_block=50063104
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.724 loading class 0x0000000002082a70
+Event: 0.727 loading class 0x0000000002082a70 done
+Event: 0.727 loading class 0x0000000002082ac0
+Event: 0.732 loading class 0x0000000002082ac0 done
+Event: 0.732 loading class 0x0000000002082b10
+Event: 0.738 loading class 0x0000000002082b10 done
+Event: 0.739 loading class 0x0000000002083890
+Event: 0.739 loading class 0x0000000002083890 done
+Event: 0.739 loading class 0x00000000020834b0
+Event: 0.739 loading class 0x00000000020834b0 done
+
+
+Dynamic libraries:
+0x000000013f4f0000 - 0x000000013f523000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\bin\java.exe
+0x0000000077740000 - 0x00000000778ea000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077620000 - 0x000000007773f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd4f0000 - 0x000007fefd55b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff480000 - 0x000007feff55b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff990000 - 0x000007feffa2f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff770000 - 0x000007feff78f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff560000 - 0x000007feff68d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077520000 - 0x000000007761a000 	C:\Windows\system32\USER32.dll
+0x000007feff790000 - 0x000007feff7f7000 	C:\Windows\system32\GDI32.dll
+0x000007feff250000 - 0x000007feff25e000 	C:\Windows\system32\LPK.dll
+0x000007fefea00000 - 0x000007fefeaca000 	C:\Windows\system32\USP10.dll
+0x000007fefbdf0000 - 0x000007fefbfe4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007feff260000 - 0x000007feff2d1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff450000 - 0x000007feff47e000 	C:\Windows\system32\IMM32.DLL
+0x000007feff340000 - 0x000007feff449000 	C:\Windows\system32\MSCTF.dll
+0x0000000070510000 - 0x00000000705e2000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x00000000622b0000 - 0x0000000062a85000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x000007fefad80000 - 0x000007fefad89000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff2e0000 - 0x000007feff32d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff330000 - 0x000007feff338000 	C:\Windows\system32\NSI.dll
+0x000007fefadb0000 - 0x000007fefadeb000 	C:\Windows\system32\WINMM.dll
+0x0000000077900000 - 0x0000000077907000 	C:\Windows\system32\PSAPI.DLL
+0x0000000070360000 - 0x000000007036f000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\jre\bin\verify.dll
+0x0000000070330000 - 0x0000000070358000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\jre\bin\java.dll
+0x0000000064c90000 - 0x0000000064ca5000 	H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Didea.launcher.port=7534 -Didea.launcher.bin.path=H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\IntelliJ-IDEA\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.execution.application.AppMain HangmanMain
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=H:\IntelliJ Java\Java-Dev\IntelliJ-IDEA_2016.2.4\java\jdk1.7.0_79
+CLASSPATH=.;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip
+PATH=H:\Java\jdk1.7.0_79\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\PROGRAM FILES\OPENOFFICE.ORG 3\URE\BIN; C:\PROGRAM FILES (X86)\OPENOFFICE.ORG 3\URE\BIN;C:\PROGRA~2\CA\SC\CAM\bin;C:\Program Files\SafeNet\Authentication\SAC\x64;C:\Program Files\SafeNet\Authentication\SAC\x32
+USERNAME=333854198
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+Memory: 4k page, physical 2052724k(256656k free), swap 2619800k(16656k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Thu May 31 10:39:04 2018
+elapsed time: 0 seconds
+
